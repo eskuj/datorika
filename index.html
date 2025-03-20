@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <!DOCTYPE html>
 <head>
@@ -18,7 +17,7 @@ body {font-size:16px;}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-teal w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Aizvērt</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Datorikas<br>Portfolio</b></h3>
   </div>
@@ -40,7 +39,7 @@ body {font-size:16px;}
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="aizvērt" id="myOverlay"></div>
 
 
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
@@ -53,8 +52,6 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid teal" class="w3-round">
   <p> Priekš rastrgrafikas tika lietots GIMP, ar kuru tika pildīti dažādi uzdevumi.</p>
         <p>Kā piemēram, izmantojot GIMP, bija jāizveido un jāstilizē savs vārds. Arī jārediģē dažādi attēli, no tiem jāizveido savādāki attēli ar specefektiem.</p>
-
-
   </div>
   
   <!-- Foto režģis -->
@@ -83,7 +80,7 @@ body {font-size:16px;}
   <div class="w3-container" id="vektorgrafika" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-teal"><b>Vektorgrafika</b></h1>
     <hr style="width:50px;border:5px solid teal" class="w3-round">
-    <p>
+    <p>Kā vektorgrafikas redaktoru izmantojām InkScape. Inkscape tika izmantots, lai izveidotu grupu darba uzņēmuma logo un priekš dažiem vingrinājumiem.</p>
   </div>
   
   <!-- Grupu darbs -->
@@ -135,19 +132,30 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid teal" class="w3-round">
     <p>Nosākuma iepazinos ar mācību materiāliem par Ms Word un pēctam tika pildīti dažādi vingrinājumi, kā formatēšana, "mail merge" izveide un formulu izmantošana. Iegūtās prasmes un zināšanas tika pārbaudītas pārbaudes darbā par šo tēmu.
     </p>
-   <img src="images/Screenshot 2025-03-20 at 16.17.01.png" style="width:50%">
+   <div style="text-align: center;"
+   <img src="images/Screenshot 2025-03-20 at 16.17.01.png" style="width:30%">
+   </div>
   </div>
+
+
+
   <!-- Video -->
   <div class="w3-container" id="video" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-teal"><b>Video</b></h1>
     <hr style="width:50px;border:5px solid teal" class="w3-round">
-  <p> Uzdevums bija izveidot scenāriju un interesantu video par grupu darba procesu, gala produktu un uzņemumu, ievietoojot reklāmu par iepriekš izvēlētu tēmu - drošas paroles. Vispirms es uzrakstīju un uzzīmēju savu scenāriju. Es izmantojot dažādus specefektus, uzņemtos videoklipus un powerpoint prezentāciju, lai izveidotu savu video. </p>
-  <img src="images/Scenarijs.jpg" style="width:50%">
+   <div style="text-align: center;"
+  <p> Uzdevums bija izveidot scenāriju un interesantu video par grupu darba procesu, gala produktu un uzņemumu, ievietoojot reklāmu par iepriekš izvēlētu tēmu - drošas paroles. Vispirms es uzrakstīju un uzzīmēju savu scenāriju. Es izmantoju dažādus specefektus, uzņemtos videoklipus un powerpoint prezentāciju, lai izveidotu savu video. </p>
+  <img src="images/Scenarijs.jpg" style="width:30%">
+<p>
   <video width="640" height="360" controls>
      <source src="images/video.mp4" type="video/mp4">
    Jūsu pārlūkprogramma neatbalsta video formātu.
   </video>
+</p>
+   </div>
   </div>
+
+
   <!-- Ms Excel -->
   <div class="w3-container" id="Ms Excel" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-teal"><b>Ms Excel</b></h1>
@@ -187,11 +195,9 @@ body {font-size:16px;}
   
  
 
-<!-- End page content -->
+<!-- lapas beigas -->
 </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
 // Script to open and close sidebar
