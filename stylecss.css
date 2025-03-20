@@ -8,9 +8,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 */
 body{
     background-color:lightgray;
-    font-family:Times New Roman;
-    
-     
+    font-family:Times New Roman; 
+}
+.image-container {
+    display: block;
+    text-align: center;
 }
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
