@@ -1,1 +1,52 @@
-
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url("images/cipari.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            background-color: rgb(220, 220, 0);
+            padding: 20px;
+            font-size: 20px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 100px;
+            font-size: 18px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function convertToBits() {
+            let bytes = document.getElementById("bytes").value;
+            document.getElementById("bits").value = bytes * 8;
+        }
+        function convertToKilobytes() {
+            let bytes = document.getElementById("bytes").value;
+            document.getElementById("kilobytes").value = bytes / 1024;
+        }
+    </script>
+</head>
+<body>
+    <h1>Informācijas daudzuma mērvienības</h1>
+    <form>
+        <p>Baiti: <input type="text" id="bytes"></p>
+        <p>Biti: <input type="text" id="bits" readonly></p>
+        <p>Kilobaiti: <input type="text" id="kilobytes" readonly></p>
+        <button type="button" onclick="convertToBits()">Pārvērst baitus bitos</button>
+        <button type="button" onclick="convertToKilobytes()">Pārvērst baitus kilobaitos</button>
+    </form>
+</body>
+</html>
