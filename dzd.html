@@ -12,28 +12,33 @@
     <script>
         function dienas() {
             let gads = new Date().getFullYear();
-            let ievaditsGads = document.getElementById("gads").value || gads;
-            let menesis = document.getElementById("menesis").value;
-            let datums = document.getElementById("datums").value;
+            let menesis = document.getElementById("menesis").value.trim();
+            let datums = document.getElementById("datums").value.trim();
             
-            if (!menesis || !datums) {
-                alert("Lūdzu, ievadiet mēnesi un dienu!");
+            console.log("Ievadīts mēnesis:", menesis, "Ievadīts datums:", datums);
+            
+            if (!menesis || !datums || isNaN(menesis) || isNaN(datums)) {
+                alert("Lūdzu, ievadiet pareizu mēnesi un dienu kā skaitļus!");
+                return;
+            }
+            
+            menesis = parseInt(menesis, 10);
+            datums = parseInt(datums, 10);
+            
+            if (menesis < 1 || menesis > 12 || datums < 1 || datums > 31) {
+                alert("Nepareizs mēnesis vai diena!");
                 return;
             }
             
             let sodiena = new Date();
-            let dzd = new Date(ievaditsGads, menesis - 1, datums);
-            
-            if (isNaN(dzd.getTime())) {
-                alert("Nepareizi ievadīts datums!");
-                return;
-            }
+            let dzd = new Date(gads, menesis - 1, datums);
             
             if (dzd < sodiena) {
                 dzd.setFullYear(gads + 1);
             }
             
             let starpiba = Math.ceil((dzd - sodiena) / (1000 * 60 * 60 * 24));
+            console.log("Atlikušās dienas:", starpiba);
             document.getElementById("dienas").value = starpiba;
         }
     </script>
@@ -43,20 +48,13 @@
     <hr>
     <form>
         <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena:</p>
-        <label for="gads">gads:</label>
-        <input type="text" id="gads" name="gads">
-        <br>
-        <br>
         <label for="menesis">mēnesis:</label>
         <input type="text" id="menesis" name="menesis">
-        <br>
         <br>
         <label for="datums">diena:</label>
         <input type="text" id="datums" name="datums">
         <br>
-        <br>
         <input type="button" id="poga" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas();">
-        <br>
         <br>
         <p>Līdz svētkiem atlikušas 
         <input type="text" id="dienas" name="dienas" readonly> dienas : ))</p>
