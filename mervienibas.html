@@ -6,7 +6,7 @@
     <title>Informācijas daudzuma mērvienības</title>
     <style>
         body {
-            background-image: url("images/cipari.jpg");
+            background-image: url('klases/cipari.jpg');
             background-size: cover;
             font-family: Arial, sans-serif;
         }
@@ -14,7 +14,7 @@
             background-color: rgb(220, 220, 0);
             padding: 20px;
             font-size: 20px;
-            width: 300px;
+            width: 350px;
             border-radius: 10px;
         }
         input[type="text"] {
@@ -22,31 +22,33 @@
             font-size: 18px;
         }
         button {
-            margin-top: 10px;
+            margin-top: 5px;
             padding: 5px 10px;
             font-size: 18px;
             cursor: pointer;
         }
     </style>
     <script>
-        function convertToBits() {
-            let bytes = document.getElementById("bytes").value;
-            document.getElementById("bits").value = bytes * 8;
+        function convertToMB() {
+            let gb = document.getElementById("gb").value;
+            document.getElementById("mb").value = gb * 1000;
         }
-        function convertToKilobytes() {
-            let bytes = document.getElementById("bytes").value;
-            document.getElementById("kilobytes").value = bytes / 1024;
+        function convertToMiB() {
+            let gb = document.getElementById("gb").value;
+            document.getElementById("mib").value = gb * 1024;
         }
     </script>
 </head>
 <body>
-    <h1>Informācijas daudzuma mērvienības</h1>
+    <h1><b>Informācijas daudzuma mērvienības</b></h1>
     <form>
-        <p>Baiti: <input type="text" id="bytes"></p>
-        <p>Biti: <input type="text" id="bits" readonly></p>
-        <p>Kilobaiti: <input type="text" id="kilobytes" readonly></p>
-        <button type="button" onclick="convertToBits()">Pārvērst baitus bitos</button>
-        <button type="button" onclick="convertToKilobytes()">Pārvērst baitus kilobaitos</button>
+        <p><input type="text" id="gb"> GB =</p>
+        <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
+        <input type="text" id="mb" readonly> MB
+        <br>
+        <button type="button" onclick="convertToMiB()">Izteikt mibibaitos</button>
+        <input type="text" id="mib" readonly> MiB
     </form>
 </body>
 </html>
+
