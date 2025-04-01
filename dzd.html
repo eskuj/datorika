@@ -10,19 +10,20 @@
         }
     </style>
     <script>
+        sodiena = new Date();
         function dienas() {
-            var gads = new Date().getFullYear();
-            var ievaditsGads = document.getElementById("gads").value || gads;
-            var menesis = document.getElementById("menesis").value;
-            var datums = document.getElementById("datums").value;
+            let gads = new Date().getFullYear();
+            let ievaditsGads = document.getElementById("gads").value || gads;
+            let menesis = document.getElementById("menesis").value;
+            let datums = document.getElementById("datums").value;
             
             if (!menesis || !datums) {
                 alert("Lūdzu, ievadiet mēnesi un dienu!");
                 return;
             }
             
-            var sodiena = new Date();
-            var dzd = new Date(ievaditsGads, menesis -1, datums);
+            let sodiena = new Date();
+            let dzd = new Date(ievaditsGads, menesis -1, datums);
             
             if (isNaN(dzd.getTime())) {
                 alert("Nepareizi ievadīts datums!");
