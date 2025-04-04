@@ -32,6 +32,12 @@ body {font-size:16px;}
         button:hover {
             background-color: #218838;
         }
+   #confirmationMessage {
+            display: none; /* Ensure it starts hidden */
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
 </style>
 </head>
 <body>
@@ -242,12 +248,10 @@ body {font-size:16px;}
 <!-- lapas beigas -->
 </div>
 
-
-<script>
-
-        document.getElementById("form").addEventListener("submit", function(event) {
+    <script>
+        document.getElementById("fakeForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent actual submission
-            document.getElementById("confirmationMessage").classList.remove("hidden");
+            document.getElementById("confirmationMessage").style.display = "block"; // Show the message
         });
 // Script to open and close sidebar
 function w3_open() {
