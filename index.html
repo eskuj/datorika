@@ -11,6 +11,27 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+  label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
 </style>
 </head>
 <body>
@@ -201,7 +222,19 @@ body {font-size:16px;}
   </div>
   
  
+<h2>Sazinies ar mani</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd5NBBEl8pFKgWjNPG8_YtkfX8ycX4XZ9yBxYnES_mfzlpXsQ/viewform?usp=header" method="POST">
+        <label for="name">Vārds:</label>
+        <input type="text" id="name" name="name" required>
 
+        <label for="email">E-pasts:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Ziņojums:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Sūtīt ziņojumu</button>
+    </form>
 <!-- lapas beigas -->
 </div>
 
