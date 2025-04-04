@@ -224,25 +224,31 @@ body {font-size:16px;}
  <br>
  <br>
 <h2>Sazinies ar mani</h2>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd5NBBEl8pFKgWjNPG8_YtkfX8ycX4XZ9yBxYnES_mfzlpXsQ/viewform?usp=header" method="POST">
-        <label for="name">Vārds:</label>
-        <input type="text" id="name" name="name" required>
+    <form id="form">
+        <label for="vārds">Vārds:</label>
+        <input type="text" id="vārds" name="vārds" required>
 
-        <label for="email">E-pasts:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="epasts">E-pasts:</label>
+        <input type="epasts" id="epasts" name="epasts" required>
 
-        <label for="message">Ziņojums:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="ziņojums">Ziņojums:</label>
+        <textarea id="ziņojums" name="ziņojums" rows="5" required></textarea>
 
         <button type="submit">Sūtīt ziņojumu</button>
      <br>
      <br>
     </form>
+ <p id="confirmationMessage" class="hidden">Tavs ziņojums ir nosūtīts!</p>
 <!-- lapas beigas -->
 </div>
 
 
 <script>
+
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual submission
+            document.getElementById("confirmationMessage").classList.remove("hidden");
+        });
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
